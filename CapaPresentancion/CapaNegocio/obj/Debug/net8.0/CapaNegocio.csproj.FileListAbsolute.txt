@@ -1,0 +1,15 @@
+C:\Users\david\OneDrive\Escritorio\MATERIAS_DE_ ITLA\Quinto_Cuatrimestre\Programacion_2\PROGRAMAS\ProyectoFinalP2\CapaPresentancion\CapaNegocio\bin\Debug\net8.0\CapaNegocio.deps.json
+C:\Users\david\OneDrive\Escritorio\MATERIAS_DE_ ITLA\Quinto_Cuatrimestre\Programacion_2\PROGRAMAS\ProyectoFinalP2\CapaPresentancion\CapaNegocio\bin\Debug\net8.0\CapaNegocio.dll
+C:\Users\david\OneDrive\Escritorio\MATERIAS_DE_ ITLA\Quinto_Cuatrimestre\Programacion_2\PROGRAMAS\ProyectoFinalP2\CapaPresentancion\CapaNegocio\bin\Debug\net8.0\CapaNegocio.pdb
+C:\Users\david\OneDrive\Escritorio\MATERIAS_DE_ ITLA\Quinto_Cuatrimestre\Programacion_2\PROGRAMAS\ProyectoFinalP2\CapaPresentancion\CapaNegocio\bin\Debug\net8.0\CapaDatos.dll
+C:\Users\david\OneDrive\Escritorio\MATERIAS_DE_ ITLA\Quinto_Cuatrimestre\Programacion_2\PROGRAMAS\ProyectoFinalP2\CapaPresentancion\CapaNegocio\bin\Debug\net8.0\CapaDatos.pdb
+C:\Users\david\OneDrive\Escritorio\MATERIAS_DE_ ITLA\Quinto_Cuatrimestre\Programacion_2\PROGRAMAS\ProyectoFinalP2\CapaPresentancion\CapaNegocio\obj\Debug\net8.0\CapaNegocio.csproj.AssemblyReference.cache
+C:\Users\david\OneDrive\Escritorio\MATERIAS_DE_ ITLA\Quinto_Cuatrimestre\Programacion_2\PROGRAMAS\ProyectoFinalP2\CapaPresentancion\CapaNegocio\obj\Debug\net8.0\CapaNegocio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\david\OneDrive\Escritorio\MATERIAS_DE_ ITLA\Quinto_Cuatrimestre\Programacion_2\PROGRAMAS\ProyectoFinalP2\CapaPresentancion\CapaNegocio\obj\Debug\net8.0\CapaNegocio.AssemblyInfoInputs.cache
+C:\Users\david\OneDrive\Escritorio\MATERIAS_DE_ ITLA\Quinto_Cuatrimestre\Programacion_2\PROGRAMAS\ProyectoFinalP2\CapaPresentancion\CapaNegocio\obj\Debug\net8.0\CapaNegocio.AssemblyInfo.cs
+C:\Users\david\OneDrive\Escritorio\MATERIAS_DE_ ITLA\Quinto_Cuatrimestre\Programacion_2\PROGRAMAS\ProyectoFinalP2\CapaPresentancion\CapaNegocio\obj\Debug\net8.0\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\david\OneDrive\Escritorio\MATERIAS_DE_ ITLA\Quinto_Cuatrimestre\Programacion_2\PROGRAMAS\ProyectoFinalP2\CapaPresentancion\CapaNegocio\obj\Debug\net8.0\CapaNego.81B9D119.Up2Date
+C:\Users\david\OneDrive\Escritorio\MATERIAS_DE_ ITLA\Quinto_Cuatrimestre\Programacion_2\PROGRAMAS\ProyectoFinalP2\CapaPresentancion\CapaNegocio\obj\Debug\net8.0\CapaNegocio.dll
+C:\Users\david\OneDrive\Escritorio\MATERIAS_DE_ ITLA\Quinto_Cuatrimestre\Programacion_2\PROGRAMAS\ProyectoFinalP2\CapaPresentancion\CapaNegocio\obj\Debug\net8.0\refint\CapaNegocio.dll
+C:\Users\david\OneDrive\Escritorio\MATERIAS_DE_ ITLA\Quinto_Cuatrimestre\Programacion_2\PROGRAMAS\ProyectoFinalP2\CapaPresentancion\CapaNegocio\obj\Debug\net8.0\CapaNegocio.pdb
+C:\Users\david\OneDrive\Escritorio\MATERIAS_DE_ ITLA\Quinto_Cuatrimestre\Programacion_2\PROGRAMAS\ProyectoFinalP2\CapaPresentancion\CapaNegocio\obj\Debug\net8.0\ref\CapaNegocio.dll

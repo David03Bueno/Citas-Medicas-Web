@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard de Citas</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        .table th, .table td {
+            text-align: center;
+            vertical-align: middle;
+            padding: 10px;
+            border: 1px solid #dee2e6;
+        }
+
+        .table thead th {
+            background-color: #a5eff6;
+        }
+
+        .table tbody tr:nth-child(odd) {
+            background-color: #edf9f7;
+        }
+
+        .table tbody tr:hover {
+            background-color: #ddd;
+        }
+
+        .crud-form {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        .crud-form .form-group {
+            margin-bottom: 15px;
+        }
+
+        .titulo {
+            text-align: center;
+        }
+        
+        .buscar-btn {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="container mt-4">
+        <!-- Título Principal -->
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="titulo">
+                <h1>Vista Doctores</h1>
+            </div>
+            <div>
+                <button type="button" class="btn btn-secondary buscar-btn mt-2" id="cerrarSesionBtn">Cerrar Sesión</button>
+                <button type="button" class="btn btn-primary buscar-btn mt-2" id="buscarBtn">Buscar Citas</button>
+            </div>
+        </div>
+
+        
+
+            <div class="text-center">
+                <button type="button" class="btn btn-primary buscar-btn" id="buscarNombreUsuarioBtn">Buscar por Nombre de Usuario</button>
+                <button type="button" class="btn btn-primary buscar-btn" id="buscarNombreDoctorBtn">Buscar por Nombre de Doctor</button>
+                <button type="button" class="btn btn-primary buscar-btn" id="buscarHorarioBtn">Buscar por Horario</button>
+                <div class="crud-form">
+                    <div class="form-group">
+                        <label for="BUSCAR">BUSCAR</label>
+                        <input type="text" class="form-control" id="BUSCAR" placeholder="Buscar a">
+                    </div>
+            </div>
+
+        <div id="resultados" class="mt-4">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre Usuario</th>
+                        <th>Motivo Cita</th>
+                        <th>Nombre Doctor</th>
+                        <th>Horario</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="C:\Users\david\OneDrive\Escritorio\MATERIAS_DE_ ITLA\Quinto_Cuatrimestre\Programacion_2\PROGRAMAS\ProyectoFinalP2\Fronend\Admin\Dashboard.js"></script>
+</body>
+</html>

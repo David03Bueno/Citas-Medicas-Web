@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Formulario de Registro</h2>
+        <h3 class="text-center">Citas Médicas</h3>
+        <form id="formulario">
+            <div class="form-group">
+                <label for="nombreCompleto">Nombre Completo</label>
+                <input type="text" class="form-control" id="nombreCompleto" placeholder="Ingrese su nombre completo" required>
+            </div>
+            <div class="form-group">
+                <label for="motivoCita">Motivo de la Cita</label>
+                <input type="text" class="form-control" id="motivoCita" placeholder="Ingrese el motivo de la cita" required>
+            </div>
+            <div class="form-group">
+                <label for="doctor">Doctor</label>
+                <select class="form-control" id="doctor" required>
+                    <option value="1">Dr. Juan Pérez</option>
+                    <option value="2">Dra. Maria González</option>
+                    <option value="3">Dr. Pedro López</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="horario">Horario</label>
+                <select class="form-control" id="horario" required>
+                    <option value="1">9:00 AM - 10:00 AM</option>
+                    <option value="2">10:00 AM - 11:00 AM</option>
+                    <option value="3">11:00 AM - 12:00 PM</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+
+        <hr>
+        <h4>Buscar Citas por Nombre</h4>
+        <div class="form-group">
+            <label for="buscarNombre">Buscar por Nombre</label>
+            <input type="text" class="form-control" id="buscarNombre" placeholder="Ingrese el nombre completo para buscar">
+            <button id="buscarBtn" class="btn btn-secondary mt-2">Buscar</button>
+        </div>
+        <div id="resultados"></div>
+    </div>
+
+    <script>
+        document.getElementById('formulario').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            
+            const nombreCompleto = document.getElementById('nombreCompleto').value;
+            const motivoCita = document.getElementById('motivoCita').value;
+            const idDoctor = document.getElementById('doctor').value;
+            const idHorario = document.getElementById('horario').value;
+
+            const data = {
+                nombreCompleto,
+                motivoCita,
+                idDoctor,
+                idHorario
+            };
+            
+            try {
+                const response = await fetch('https://localhost:7010/api/Citas', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    console.log('Cita registrada:', result);
+                    alert('Cita registrada exitosamente.');
+                    document.getElementById('formulario').reset();
+                } else {
+                    const errorData = await response.json();
+                    console.error('Error:', errorData);
+                    alert('Error al registrar la cita.');
+                }
+            } catch (error) {
+                console.error('Error de red:', error);
+                alert('Error de red al registrar la cita.');
+            }
+        });
+
+        document.getElementById('buscarBtn').addEventListener('click', async function() {
+            const nombre = document.getElementById('buscarNombre').value;
+
+            try {
+                const response = await fetch(`https://localhost:7010/api/Citas?NombreUsuario=${encodeURIComponent(nombre)}`);
+                    console.log(response)
+                if (response.ok) {
+                    const citas = await response.json();
+                    mostrarResultados(citas);
+                } else {
+                    console.error('Error al buscar citas');
+                    alert('No se encontraron citas.');
+                }
+            } catch (error) {
+                console.error('Error de red:', error);
+                alert('Error de red al buscar citas.');
+            }
+        });
+
+        function mostrarResultados(citas) {
+            const resultadosDiv = document.getElementById('resultados');
+            resultadosDiv.innerHTML = '';
+
+            if (citas.length === 0) {
+                resultadosDiv.innerHTML = '<p>No se encontraron citas.</p>';
+            } else {
+                citas.forEach(cita => {
+                    resultadosDiv.innerHTML += `
+                        <div class="card mt-2">
+                            <div class="card-body">
+                                <h5 class="card-title">${cita.nombreCompleto}</h5>
+                                <p class="card-text">Motivo: ${cita.motivoCita}</p>
+                                <p class="card-text">Doctor: ${cita.nombreDoctor}</p>
+                                <p class="card-text">Horario: ${cita.horario}</p>
+                            </div>
+                        </div>
+                    `;
+                });
+            }
+        }
+    </script>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
